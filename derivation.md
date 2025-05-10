@@ -228,7 +228,7 @@ $$
 which arises directly from the transverse component of Newton’s law under rotating axes:
 
 $$
- m v \frac{d\theta}{dt} = \bigl(\mathbf{F}_T - \mathbf{F}_D\bigr) \cdot \hat{\mathbf{e}}_{\perp} - mg\cos\theta.
+m v \frac{d\theta}{dt} = \left( \mathbf{F}_T - \mathbf{F}_D \right) \cdot \hat{\mathbf{e}}_{\perp} - mg\cos\theta.
 $$
 
 Projecting thrust minus drag onto the normal direction $\hat{\mathbf{e}}_{\perp}=(-\sin\theta,\cos\theta)$ gives $-(T-D)\sin\theta$, and gravity contributes $-mg\cos\theta$. Dividing by $m v$ yields the above expression.
