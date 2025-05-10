@@ -26,8 +26,8 @@ m = 100.0       # Mass (kg)
 method = "FDM"
 model = TrajectoryModel(T=T, L=L, g=g, m=m)
 
-# Domain: 40 interior cells, 1 left + 1 right boundary cell, 2 variables (y, v)
-d = Domain.from_size(20, 1, 1,
+# Domain: 80 interior cells, 1 left + 1 right boundary cell, 2 variables (y, v)
+d = Domain.from_size(80, 1, 1,
                      ["y", "v"], xmin=0.0, xmax=L)
 
 # Boundary conditions
@@ -78,7 +78,7 @@ for cell in d.interior():
 # Run the solver to steady state
 # ------------------------------------------------------------------------------
 
-num_iter = s.steady_state()
+num_iter = s.steady_state(split=True, split_locs=[1])
 
 # ------------------------------------------------------------------------------
 # Visualize the result
